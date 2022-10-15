@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3 id="random-number">Random number between 0 and another number:</h3>
+        <code>
+<pre>function randomInt(max) {
+    return Math.floor(Math.random() * max);
+}</pre>
+        </code>
+    </div>
+    
+    <div>
+        <h3 id="squared">Squared number:</h3>
+        <code>
+<pre>function squared(num) {
+    return num * num;
+}</pre>            
+        </code>
+    </div>
+
+    <div>
+        <h3 id="cubed">Cubed number:</h3>
+        <code>
+<pre>function cubed(num) {
+    return num * num * num;
+}</pre>
+        </code>
+    </div>
+
+
+    <div>
+        <h3 id="factorial">Factorial:</h3>
+        <code>
+<pre>function factorial(num) {
+    if (num < 0) return undefined;
+    if (num === 0) return 1;
+    let x = num - 1;
+    while (x > 1) {
+        num *= x;
+        x--;
+    }
+    return num;
+}</pre>
+        </code>
+    </div>
+</body>
+</html>
