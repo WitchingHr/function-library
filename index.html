@@ -60,5 +60,21 @@
 }</pre>
         </code>
     </div>
+
+    <div>
+        <h3>Callback:</h3>
+        <code>
+<pre>function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+}
+  
+ask(
+    "Do you agree?",
+    function() { alert("You agreed."); },
+    function() { alert("You canceled the execution."); }
+);</pre>
+        </code>
+    </div>
 </body>
 </html>
