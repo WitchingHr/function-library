@@ -37,7 +37,7 @@
 
 
     <div>
-        <h3 id="factorial">Factorial:</h3>
+        <h3 id="factorial">Factorial (iterative):</h3>
         <code>
 <pre>function factorial(num) {
     if (num < 0) return undefined;
@@ -46,6 +46,18 @@
         num *= i;
     }
     return num; 
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3 id="factorial">Factorial (recursive):</h3>
+        <code>
+<pre>function factorial(n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
 }</pre>
         </code>
     </div>
