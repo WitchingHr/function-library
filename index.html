@@ -153,5 +153,20 @@ outer: for (let i = 2; i <= n; i++) {
 }</pre>
         </code>
     </div>
+
+    <div>
+        <h3>Reverse string:</h3>
+        <code>
+<pre>function reverseString(string) {
+    const str = string;
+    const arr = str.split('');
+    let revStr = '';
+    for (i = str.length - 1; i >= 0; i--) {
+        revStr += arr.pop();
+    }
+    return revStr;
+}</pre>
+        </code>
+    </div>
 </body>
 </html>
