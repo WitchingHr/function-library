@@ -168,5 +168,41 @@ outer: for (let i = 2; i <= n; i++) {
 }</pre>
         </code>
     </div>
+
+    <div>
+        <h3>Remove specific items from array (takes multiple arguments):</h3>
+        <code>
+<pre>function removeFromArray(array) {
+    for (let i = 1; i < arguments.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[j] === arguments[i]) {
+                array.splice(j, 1);
+            }
+        }
+    }
+    return array;
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Fahrenheit to Celsius (rounded to 1st decimal):</h3>
+        <code>
+<pre>function ftoc(f) { 
+    const c = ((+f - 32) * 5) / 9; 
+    return +Number(c).toFixed(1);
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Celsius to Fahrenheit (rounded to 1st decimal):</h3>
+        <code>
+<pre>function ctof(c) {
+    const f = c * 1.8 + 32;
+    return +Number(f).toFixed(1);
+}</pre>
+        </code>
+    </div>
 </body>
 </html>
