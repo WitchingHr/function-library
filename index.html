@@ -204,5 +204,20 @@ outer: for (let i = 2; i <= n; i++) {
 }</pre>
         </code>
     </div>
+
+    <div>
+        <h3>Test if a number is narcissistic:</h3>
+        <code>
+<pre>function narcissistic(value) {
+    const arr = value.toString().split('');
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += (+arr[i]) ** arr.length;
+    }
+    return (sum === value) ? true : false;
+}</pre>
+        </code>
+    </div>
+    
 </body>
 </html>
