@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Function Library</title>
 </head>
 <body>
@@ -215,6 +216,113 @@ outer: for (let i = 2; i <= n; i++) {
         sum += (+arr[i]) ** arr.length;
     }
     return (sum === value) ? true : false;
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Remove vowels from a string:</h3>
+        <code>
+<pre>function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, '');
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Count vowels in a string:</h3>
+        <code>
+<pre>function getCount(str) {
+    return str.match(/aeiou/gi||[]).length;
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Count unique vowels in a string:</h3>
+        <code>
+<pre>function duplicateCount(text){
+    const lower = text.toLowerCase();
+    let count = 0;
+    const used = [];
+    
+    lower.split('').forEach(function(letter) {
+        if (!used.includes(letter) && (lower.split(letter).length - 1) > 1) {
+            count++;
+            used.push(letter);
+        }
+    });
+    
+    return count;
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Return sum of an array:</h3>
+        <code>
+<pre>const sum = function(arr) {
+    return arr.reduce((total, item) => {
+        return total += item;
+}, 0)}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Check for palindromes:</h3>
+        <code>
+<pre>function palindromes(str) {
+    const re = /[\W_]/g; // /[\W_]/g = non-alphanumeric
+    const string = str.toLowerCase().replace(re, '');
+    const reverse = string.split('').reverse().join('');
+    return string === reverse;
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Fibonacci:</h3>
+        <code>
+<pre>const fib = (a, b, n) => n ? fib(b, a+b, n-1) : a;
+fib(0, 1, 50);</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Find oldest person in an array of objects:</h3>
+        <code>
+<pre>const findTheOldest = function(array) {
+    return array.reduce((older, current) => {
+        const oldest = getAge(older.yearOfBirth, older.yearOfDeath);
+        const younger = getAge(current.yearOfBirth, current.yearOfDeath);
+        return oldest > younger ? older : current;
+    })
+};
+
+function getAge(birth, death) {
+    if (!death) {
+        death = (new Date()).getFullYear();
+    }
+    return death - birth;
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Convert string to array with characters in pairs:</h3>
+        <code>
+<pre>function solution(str){
+    const matches = (str + "_").match(/../g);
+    return matches || [];
+}</pre>
+        </code>
+    </div>
+
+    <div>
+        <h3>Evaluate string mathematically:</h3>
+        <code>
+<pre>function parse(str) {
+    return Function(`'use strict'; return (${str})`)()
 }</pre>
         </code>
     </div>
