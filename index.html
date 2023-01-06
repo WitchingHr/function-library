@@ -330,7 +330,7 @@ function getAge(birth, death) {
     <div>
         <h3>Count characters in a string, adding to object:</h3>
         <code>
-<pre>function count (string) {  
+<pre>function count(string) {  
     const count = {};
     string.split('').forEach(function(s) {
        count[s] ? count[s]++ : count[s] = 1;
@@ -339,6 +339,30 @@ function getAge(birth, death) {
 }</pre>
         </code>
     </div>
+
+    <div>
+        <h3>Find longest common prefix in array of strings:</h3>
+        <code>
+<pre>function longestCommonPrefix(strs) {
+    if (!strs.length) return '';
+    for (i = 0; i < strs[0].length; i++) {
+        if (!strs.every((string) => string[i] === strs[0][i]))
+            return strs[0].slice(0, i);
+    }
+    return strs[0];
+}</pre>
+        </code>
+    </div>
     
+    <div>
+        <h3>Get Date Locale:</h3>
+        <code>
+<pre>function getDateToday() {
+    const offset = (new Date()).getTimezoneOffset() * 60000;
+    const today = (new Date(Date.now() - offset)).toISOString().split('T')[0];
+    return today;
+}</pre>
+        </code>
+    </div>
 </body>
 </html>
