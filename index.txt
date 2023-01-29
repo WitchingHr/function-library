@@ -1,65 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Function Library</title>
-</head>
-<body>
-    <div>
-        <h3>for...of:</h3>
-        <code>
-<pre>for (const item of array) {
-    // code to run
-}</pre>
-        </code>
-    </div>
-    
-    <div>
-        <h3>for:</h3>
-        <code>
-<pre>for (initializer; condition; final-expression) {
-    // code to run
-}</pre>
-        </code>
-    </div>
-
-    <div>
-        <h3>while:</h3>
-        <code>
-<pre>initializer
-while (condition) {
-    // code to run
-    
-    final-expression
-}</pre>
-        </code>
-    </div>
-
-    <div>
-        <h3>do...while:</h3>
-        <code>
-<pre>initializer
-do {
-    // code to run
-    
-    final-expression
-} while (condition)</pre>
-        </code>
-    </div>
-    
-    <div>
-        <h3 id="random-number">Random number between 0 and another number:</h3>
-        <code>
-<pre>function getRandInt(max) {
-    return Math.floor(Math.random() * max);
-}</pre>
-        </code>
-    </div>
-    
     <div>
         <h3 id="squared">Squared number:</h3>
         <code>
@@ -361,8 +299,4 @@ function getAge(birth, death) {
     const offset = (new Date()).getTimezoneOffset() * 60000;
     const today = (new Date(Date.now() - offset)).toISOString().split('T')[0];
     return today;
-}</pre>
-        </code>
-    </div>
-</body>
-</html>
+}
